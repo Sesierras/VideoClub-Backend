@@ -1,0 +1,21 @@
+{
+  "name": "videoclubinterface",
+  "version": "1.0.0",
+  "description": "This is an interface to watch movies information and CRUD with react, node.js and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "React",
+    "HTTP",
+    "MongoDB"
+  ],
+  "author": "Juan Niño",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  }
+}
