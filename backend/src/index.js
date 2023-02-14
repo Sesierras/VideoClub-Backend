@@ -18,8 +18,10 @@ const user = 'Administrador';
 const password = 'Admin1342**';
 const dbName = 'videoClubDataBase';
 const URL = `mongodb+srv://${user}:${password}@videoclubdatabase.ry0toej.mongodb.net/${dbName}?retryWrites=true&w=majority`
-/* 
-app.use((req, res, next) => {
+
+APP.use("/", routes);
+
+APP.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
     res.header(
@@ -29,7 +31,7 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
   });
- */
+
 mongoose.connect(`${URL}`)
     .then(() => console.log('Succesfully connected'))
     .catch((err) => console.error(err));

@@ -24,6 +24,9 @@ const movieSchema = new mongoose.Schema(
         },
         mov_rel_country:{
             type:String
+        },
+        gen_title: {
+            type: String
         }
     },
     {
@@ -48,26 +51,6 @@ const movieDirectionSchema = new mongoose.Schema(
         mov_id:{
             type: mongoose.Types.ObjectId,
             required:true
-        }
-    },
-    {
-        timestamps:true
-    }
-)
-
-const movieGenderSchema = new mongoose.Schema(
-    {
-        mov_id:{
-            type: mongoose.Types.ObjectId,
-            required:true
-        },
-        gender:{
-            type:{
-                gen_title:{
-                    type:String,
-                    required:true
-                }
-            }
         }
     },
     {
@@ -116,3 +99,7 @@ const movieCastSchema= new mongoose.Schema(
     }
 )
 
+module.exports = mongoose.model("movie", movieSchema);
+module.exports = mongoose.model("cast", movieCastSchema);
+module.exports = mongoose.model("raiting", raitingSchema);
+module.exports = mongoose.model("director", movieDirectionSchema);
