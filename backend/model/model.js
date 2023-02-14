@@ -2,21 +2,19 @@ const mongoose = require("mongoose");
 
 // Schemas
 
-mongoose.set('useCreateIndex', true);
-
 const movieSchema = new mongoose.Schema(
     {
         mov_title:{
-            type: 'string',
+            type: String,
             required:true,
             unique:true
         },
         mov_year:{
-            type: integer,
+            type: Number,
             required: true,
         },
         mov_time:{
-            type: integer
+            type: Number
         },
         mov_lang:{
             type: String
@@ -91,10 +89,10 @@ const raitingSchema = new mongoose.Schema(
             }
         },
         rev_stars: {
-            type:integer
+            type: Number
         },
         num_o_raitings: {
-            type:integer
+            type: Number
         }
     }
 )
