@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Table from './components/Table';
+import Navbar from './components/Navbar';
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -27,9 +28,12 @@ function App() {
  
 
   return (
-    <div className="App">
-      <div>
+    <div className="bg-white dark:bg-slate-900 min-h-screen font-inter  ">
+		<div className="">
+		<Navbar/>
         <Table/>
+		
+
       </div>
      
      <>
