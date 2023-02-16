@@ -25,7 +25,15 @@ const movieSchema = new mongoose.Schema(
         },
         gen_title: {
             type: String
-        },
+        }
+    },
+    {
+        timestamps:true
+    }
+)
+
+const movieDirectionSchema = new mongoose.Schema(
+    {
         dir_info:{
             type:{
                 dir_name:{
@@ -35,17 +43,12 @@ const movieSchema = new mongoose.Schema(
                 dir_lastname:{
                     type:String
                 }
-            }
+            },
+            required: true
         },
-        actor:{
-            type:{
-                act_name:{
-                    type:String,
-                },
-                act_lastName:{
-                    type:String,
-                }
-            }
+        mov_id:{
+            type: mongoose.Types.ObjectId,
+            required:true
         }
     },
     {
@@ -73,7 +76,28 @@ const raitingSchema = new mongoose.Schema(
             type: Number
         }
     }
-);
+)
+
+const movieCastSchema= new mongoose.Schema(
+    {
+        actor:{
+            type:{
+                act_name:{
+                    type:String,
+                    required:true,
+                },
+                act_lastName:{
+                    type:String,
+                }
+            }
+        },
+        mov_id:{
+            type: mongoose.Types.ObjectId
+        }
+    }
+)
 
 module.exports = mongoose.model("movie", movieSchema);
+module.exports = mongoose.model("cast", movieCastSchema);
 module.exports = mongoose.model("raiting", raitingSchema);
+module.exports = mongoose.model("direction", movieDirectionSchema);
