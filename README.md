@@ -10,6 +10,10 @@ view add movie
 
 ![agregar movie](https://user-images.githubusercontent.com/116750999/219390577-2e00205a-5308-47df-9fe4-dc08e6e2906b.PNG)
 
+Alert delete
+![Alerta eliminar](https://user-images.githubusercontent.com/116750999/219393601-3a612648-92aa-4c97-90b0-e3346df73201.PNG)
+
+
 
 
 ## Application link: 
