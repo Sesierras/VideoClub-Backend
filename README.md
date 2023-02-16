@@ -1,21 +1,22 @@
 # Video-Club-Interface
 # Bienvenido al repositorio
 
-###### ¡Hola! Esta es una aplicación desarrollada con React y Express, un CRUD que permite añadir, modificar, eliminar y editar una pelicula registrada.
-Vista Desktop
+###### Hello! This is an application developed with React and Express, a CRUD that allows you to add, modify, delete and edit a registered movie.
+desktop view
 
 ![desktop movie](https://user-images.githubusercontent.com/116750999/219390558-15c07c6f-9995-43a1-8c02-68ffa6b39dba.PNG)
 
-Vista Agregar peliculas
+view add movie
 
 ![agregar movie](https://user-images.githubusercontent.com/116750999/219390577-2e00205a-5308-47df-9fe4-dc08e6e2906b.PNG)
 
 
 
-## Enlace de aplicación: 
-https://todolist-tau-rust.vercel.app/
+## Application link: 
 
-## Instalación de Paquetes:
+
+
+## Package installation:
 npm inint -y
 npm i axios 
 npm i --save express
