@@ -10,7 +10,7 @@ const APP = express();
 
 mongoose.set('strictQuery', false);
 
-const routes = require('../routes/routes');
+const router1 = require('../routes/router1');
 
 APP.use(express.json());
 
@@ -19,7 +19,7 @@ const password = 'Admin1342**';
 const dbName = 'videoClubDataBase';
 const URL = `mongodb+srv://${user}:${password}@videoclubdatabase.ry0toej.mongodb.net/${dbName}?retryWrites=true&w=majority`
 
-APP.use("/", routes);
+APP.use("/", router1);
 
 APP.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -33,9 +33,9 @@ APP.use((req, res, next) => {
   });
 
 mongoose.connect(`${URL}`)
-    .then(() => console.log('Succesfully connected'))
+    .then(() => console.log('Successfully connected'))
     .catch((err) => console.error(err));
 
 APP.listen(PORT, () => {
-    console.log("The server is listening")
-})
+    console.log("The server is listening");
+});
