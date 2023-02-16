@@ -6,12 +6,10 @@ const movieSchema = new mongoose.Schema(
     {
         mov_title:{
             type: String,
-            required:true,
             unique:true
         },
         mov_year:{
-            type: Number,
-            required: true,
+            type: String,
         },
         mov_time:{
             type: Number
@@ -20,22 +18,14 @@ const movieSchema = new mongoose.Schema(
             type: String
         },
         mov_dt_rel:{
-            type: Date
+            type: String
         },
         mov_rel_country:{
             type:String
         },
         gen_title: {
             type: String
-        }
-    },
-    {
-        timestamps:true
-    }
-)
-
-const movieDirectionSchema = new mongoose.Schema(
-    {
+        },
         dir_info:{
             type:{
                 dir_name:{
@@ -45,12 +35,17 @@ const movieDirectionSchema = new mongoose.Schema(
                 dir_lastname:{
                     type:String
                 }
-            },
-            required: true
+            }
         },
-        mov_id:{
-            type: mongoose.Types.ObjectId,
-            required:true
+        actor:{
+            type:{
+                act_name:{
+                    type:String,
+                },
+                act_lastName:{
+                    type:String,
+                }
+            }
         }
     },
     {
@@ -78,28 +73,7 @@ const raitingSchema = new mongoose.Schema(
             type: Number
         }
     }
-)
-
-const movieCastSchema= new mongoose.Schema(
-    {
-        actor:{
-            type:{
-                act_name:{
-                    type:String,
-                    required:true,
-                },
-                act_lastName:{
-                    type:String,
-                }
-            }
-        },
-        mov_id:{
-            type: mongoose.Types.ObjectId
-        }
-    }
-)
+);
 
 module.exports = mongoose.model("movie", movieSchema);
-module.exports = mongoose.model("cast", movieCastSchema);
 module.exports = mongoose.model("raiting", raitingSchema);
-module.exports = mongoose.model("director", movieDirectionSchema);
