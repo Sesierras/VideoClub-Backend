@@ -80,8 +80,7 @@ In conclusion, a CRUD video club project would be an ideal solution for any busi
 -  Express
 -  React
 -  Node.js
-
-## We decided Mongoose to connect MongoDB or MongoAtlas with our server created with express and node as a runtime enviroment for js, frontend we decided to work with React to avail hooks as usestate and get the information from the database or push. 
+We decided Mongoose to connect MongoDB or MongoAtlas with our server created with express and node as a runtime enviroment for js, frontend we decided to work with React to avail hooks as usestate and get the information from the database or push. 
 
 
 - ## Installation
