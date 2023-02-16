@@ -18,6 +18,11 @@ Mobile view
 
 ![version mobile movie](https://user-images.githubusercontent.com/116750999/219394837-528129b4-fc23-484e-9d9a-1cb7f5eb5694.PNG)
 
+View tablet
+
+![Tablet vista](https://user-images.githubusercontent.com/116750999/219396112-e50880aa-5e50-4027-9df7-2b88f51c191a.PNG)
+
+
 
 
 
@@ -55,7 +60,3 @@ npm i cors
 npm postcss
 npm nodemon
 
-![photo_2023-02-10_09-11-40](https://user-images.githubusercontent.com/91699554/218153799-631cede9-6c8a-474f-9117-4165af82d1a0.jpg)
-
-![photo_2023-02-10_09-14-04](https://user-images.githubusercontent.com/91699554/218154344-40913171-458f-4c07-b259-d00e127d3d02.jpg)
-![photo_2023-02-10_09-16-05](https://user-images.githubusercontent.com/91699554/218154812-d8d52c1a-cc4a-4548-94bf-c16cd8e5dcd4.jpg)
