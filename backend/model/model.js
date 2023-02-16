@@ -9,7 +9,7 @@ const movieSchema = new mongoose.Schema(
             unique:true
         },
         mov_year:{
-            type: String,
+            type: String
         },
         mov_time:{
             type: Number
@@ -17,7 +17,7 @@ const movieSchema = new mongoose.Schema(
         mov_lang:{
             type: String
         },
-        mov_dt_rel:{
+        mov_dt_rel : {
             type: String
         },
         mov_rel_country:{
@@ -38,17 +38,14 @@ const movieDirectionSchema = new mongoose.Schema(
             type:{
                 dir_name:{
                     type:String,
-                    required:true
                 },
                 dir_lastname:{
                     type:String
                 }
             },
-            required: true
         },
         mov_id:{
             type: mongoose.Types.ObjectId,
-            required:true
         }
     },
     {
@@ -65,7 +62,6 @@ const raitingSchema = new mongoose.Schema(
             type:{
                 rev_name:{
                     type:String,
-                    require:true
                 }
             }
         },
@@ -84,7 +80,6 @@ const movieCastSchema= new mongoose.Schema(
             type:{
                 act_name:{
                     type:String,
-                    required:true,
                 },
                 act_lastName:{
                     type:String,
@@ -99,5 +94,5 @@ const movieCastSchema= new mongoose.Schema(
 
 module.exports = mongoose.model("movie", movieSchema);
 module.exports = mongoose.model("cast", movieCastSchema);
-module.exports = mongoose.model("raiting", raitingSchema);
+module.exports = mongoose.model("ranking", rankingSchema);
 module.exports = mongoose.model("direction", movieDirectionSchema);
