@@ -3,6 +3,7 @@
 
 ###### ¡Hola! Esta es una aplicación desarrollada con React y Express, un CRUD que permite añadir, modificar, eliminar y editar una pelicula registrada.
 Vista Desktop
+
 ![desktop movie](https://user-images.githubusercontent.com/116750999/219390558-15c07c6f-9995-43a1-8c02-68ffa6b39dba.PNG)
 
 Vista Agregar peliculas
