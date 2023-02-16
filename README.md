@@ -1,5 +1,5 @@
 # Video-Club-Interface
-# Bienvenido al repositorio
+# Welcome to the repository
 
 ###### Hello! This is an application developed with React and Express, a CRUD that allows you to add, modify, delete and edit a registered movie.
 desktop view
