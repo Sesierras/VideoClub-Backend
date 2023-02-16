@@ -10,7 +10,14 @@ view add movie
 
 ![agregar movie](https://user-images.githubusercontent.com/116750999/219390577-2e00205a-5308-47df-9fe4-dc08e6e2906b.PNG)
 
+## STACK:
 
+## Mongoose
+## Express
+## React
+## Node.js
+
+## We decided Mongoose to connect MongoDB or MongoAtlas with our server created with express and node as a runtime enviroment for js, frontend we decided to work with React to avail hooks as usestate and get the information from the database or push. 
 
 ## Application link: 
 
