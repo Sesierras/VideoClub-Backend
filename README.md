@@ -13,6 +13,10 @@ view add movie
 Alert delete
 ![Alerta eliminar](https://user-images.githubusercontent.com/116750999/219393601-3a612648-92aa-4c97-90b0-e3346df73201.PNG)
 
+Mobile view
+![version mobile movie](https://user-images.githubusercontent.com/116750999/219394837-528129b4-fc23-484e-9d9a-1cb7f5eb5694.PNG)
+
+
 
 
 
