@@ -1,40 +1,42 @@
 const mongoose = require('mongoose');
 const express = require('express');
-
+const cors = require('cors');
 
 
 // Connection
-
 const PORT = 3030;
 const APP = express();
 
-mongoose.set('strictQuery', false);
+const moviesRoutes = require('../routes/router2');
 
-const router1 = require('../routes/router1');
+const connectionOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 
 APP.use(express.json());
+
+const corsOption={
+  origin:"*",
+  method:["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders:["Origin", "X-Requested-With", "Content-Type", "Accept"],
+  credentials: true
+}; 
+
+APP.use(cors(corsOption));
 
 const user = 'Administrador';
 const password = 'Admin1342**';
 const dbName = 'videoClubDataBase';
 const URL = `mongodb+srv://${user}:${password}@videoclubdatabase.ry0toej.mongodb.net/${dbName}?retryWrites=true&w=majority`
 
-APP.use("/", router1);
-
-APP.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE")
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    res.header("Access-Control-Allow-Credentials", "true");
-    next();
-  });
+mongoose.set("strictQuery", false);
 
 mongoose.connect(`${URL}`)
-    .then(() => console.log('Successfully connected'))
-    .catch((err) => console.error(err));
+.then(() => console.log('Successfully connected'))
+.catch((err) => console.error(err));
+
+APP.use("/", router2);
 
 APP.listen(PORT, () => {
     console.log("The server is listening");

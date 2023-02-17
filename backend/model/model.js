@@ -53,7 +53,7 @@ const movieDirectionSchema = new mongoose.Schema(
     }
 )
 
-const raitingSchema = new mongoose.Schema(
+const rankingSchema = new mongoose.Schema(
     {
         mov_id:{
             type: mongoose.Types.ObjectId
