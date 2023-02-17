@@ -66,10 +66,6 @@ function Add(addData) {
     const [directorLn, setDirectorLn]= useState("");
     const handleSetDirectorLn = (e) => {setDirectorLn(e.target.value)}
 
-
-    const [genreTitle, setGenreTitle] = useState("");
-    const handleSetGenre = (e) => {setGenreTitle(e.target.value)}
-
     const handleSubmit = () => {
         const sendDataToBack = [...data];
         sendDataToBack[0].title = title;
@@ -142,14 +138,11 @@ function Add(addData) {
                 >
                     ADD MOVIE
                 </button>
-               
                 <button
                 
                     className="bg-red-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
                     type="cancel"
                     onClick='nodal=false'
-
-                    
                 >
                     CANCELAR
                 </button>
