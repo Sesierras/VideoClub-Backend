@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 function Edit() {
@@ -14,7 +14,7 @@ function Edit() {
     const [genreTitle, setGenreTitle] = useState("");
 
     useEffect(() => {
-        axios.get(`mongodb+srv://Administrador:Admin1342**@videoclubdatabase.ry0toej.mongodb.net/?retryWrites=true&w=majority`).then((res) => {
+        axios.get(`mongodb+srv://Administrador:Admin1342**@videoclubdatabase.ry0toej.mongodb.net/videoClubDataBase?retryWrites=true&w=majority`).then((res) => {
             setTitle(res.data.title);
             setYear(res.data.year);
             setTime(res.data.time);
