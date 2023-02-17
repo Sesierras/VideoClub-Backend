@@ -7,7 +7,7 @@ const cors = require('cors');
 const PORT = 3030;
 const APP = express();
 
-const moviesRoutes = require('../routes/router2');
+const moviesRoutes = require('./routes/router2');
 
 const connectionOptions = {
   useNewUrlParser: true,
@@ -32,11 +32,11 @@ const URL = `mongodb+srv://${user}:${password}@videoclubdatabase.ry0toej.mongodb
 
 mongoose.set("strictQuery", false);
 
-mongoose.connect(`${URL}`)
+mongoose.connect(URL, connectionOptions)
 .then(() => console.log('Successfully connected'))
 .catch((err) => console.error(err));
 
-APP.use("/", router2);
+APP.use("/", moviesRoutes);
 
 APP.listen(PORT, () => {
     console.log("The server is listening");

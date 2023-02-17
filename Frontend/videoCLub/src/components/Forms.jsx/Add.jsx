@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Add() {
+function Add(addData) {
     const data = [
         {
             "title": "",
@@ -50,11 +50,22 @@ function Add() {
     const [country, setCountry] = useState("");
     const handleSetCountry = (e) => {setCountry(e.target.value)}
     
+    const [genre, setGenre] = useState("");
+    const handleSetGenre = (e) => {
+        const sendDataToBack = [...data];
+        sendDataToBack[0].genres = [...data[0].genres, {kind: genre}]
+    }
 
     const [actorN, setActorN] = useState("");
     const handleSetActorN = (e) => {setActorN(e.target.value)}
     const [actorLn, setActorLn] = useState("");
     const handleSetActorLn = (e) => {setActorLn(e.target.value)}
+
+    const [directorN, setDirectorN] = useState("");
+    const handleSetDirector = (e) => {setDirectorN(e.target.value)}
+    const [directorLn, setDirectorLn]= useState("");
+    const handleSetDirectorLn = (e) => {setDirectorLn(e.target.value)}
+
 
     const [genreTitle, setGenreTitle] = useState("");
     const handleSetGenre = (e) => {setGenreTitle(e.target.value)}
@@ -67,13 +78,10 @@ function Add() {
         sendDataToBack[0].language = language;
         sendDataToBack[0].date = date;
         sendDataToBack[0].country = country;
-        sendDataToBack[]
-    }
-    
+        sendDataToBack[0].director.push({name: directorN, lastname: directorLn});
+        sendDataToBack[0].actor.push({name: actorN, lastname: directorLn});
 
-    function submitForm(e) {
-        e.preventDefault();
-        axios.post("http://localhost:3001/users", data).then(navigate("/"));
+        addData(sendDataToBack);
     }
 
     return (
@@ -85,50 +93,43 @@ function Add() {
                     <span class="sr-only">Close modal</span>
                 </button>
                 <input
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    onChange={handleSetTitle}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="text"
                     placeholder="Inserta titulo"
                 />
                 <input
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
+                    onChange = {handleSetYear}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="year"
                     placeholder="Inserta año"
                 />
                 <input
-                    value={time}
-                    onChange={(e) => setTime(e.target.value)}
+                    onChange={handleSetTime}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="text"
                     placeholder="Inserta duración"
                 />
                 <input
-                    value={language}
-                    onChange={(e) => setLanguage(e.target.value)}
+                    onChange={handleSetLanguage}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="text"
                     placeholder="Inserta lenguaje"
                 />
                 <input
-                    value={date}
-                    onChange={(e) => setDate(e.target.value)}
+                    onChange={handleSetLanguage}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="date"
                     placeholder="Inserta fecha de estreno"
                 />
                 <input
-                    value={country}
-                    onChange={(e) => setCountry(e.target.value)}
+                    onChange={handleSetCountry}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="text"
                     placeholder="inserta ciudad"
                 />
                 <input
-                    value={genreTitle}
-                    onChange={(e) => setGenreTitle(e.target.value)}
+                    onChange={handleSetGenre}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="phone"
                     placeholder="Inserta genero"
@@ -137,7 +138,7 @@ function Add() {
                 <button
                     className="bg-teal-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
                     type="submit"
-                    onClick={submitForm}
+                    onSubmit={handleSubmit}
                 >
                     ADD MOVIE
                 </button>

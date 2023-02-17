@@ -15,7 +15,7 @@ const movieSchema = new mongoose.Schema({
     ],
     genres: [
         {
-            kind: String
+            type: String
         }
     ],
     actor: [

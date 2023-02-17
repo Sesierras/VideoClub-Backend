@@ -15,14 +15,14 @@ router.get("/rating", (req, res) => {
         res.json(result);
     });
 });
-router.get("/movSelectMovie/:title", (req, res) => {
+/* router.get("/movSelectMovie/:title", (req, res) => {
     movie.find({ title: req.params.title }, (err, result) => {
         if (err) throw new Error(err);
         res.json(result);
     });
-});
+}); */
 
-router.get("/movIndex/:title", (req, res) => {
+/* router.get("/movIndex/:title", (req, res) => {
     const entry = req.params.title;
     const regex = new RegExp(`^ ${entry}`, 'i');
     movie.find(
@@ -34,9 +34,9 @@ router.get("/movIndex/:title", (req, res) => {
             if (err) throw new Error(err);
             res.json(result);
         });
-});
+}); */
 
-router.get("/movContains/:title", (req, res) => {
+/* router.get("/movContains/:title", (req, res) => {
     const entry = req.params.title;
 
     movie.find(
@@ -46,10 +46,10 @@ router.get("/movContains/:title", (req, res) => {
             if (err) throw new Error(err);
             res.json(result);
         });
-});
+}); */
 
 
-router.get("/rankingContains/:title", (req, res) => {
+/* router.get("/rankingContains/:title", (req, res) => {
     const entry = req.params.title;
     ranking.find(
         {
@@ -58,7 +58,7 @@ router.get("/rankingContains/:title", (req, res) => {
             if (err) throw new Error(err);
             res.json(result);
         });
-});
+}); */
 
 
 router.post("/newMovies", (req, res) => {
