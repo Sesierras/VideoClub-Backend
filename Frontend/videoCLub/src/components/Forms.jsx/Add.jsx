@@ -41,10 +41,15 @@ function Add() {
         e.preventDefault();
         axios.post("http://localhost:3001/users", data).then(navigate("/"));
     }
+
     return (
         <div className="w-screen h-full flex flex-col justify-center items-center mt-16">
             <h2 className="text-2xl font-bold">ADD MOVIE</h2>
             <form className="w-[50%] h-full flex flex-col mt-2">
+            <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
                 <input
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
@@ -94,6 +99,7 @@ function Add() {
                     type="phone"
                     placeholder="Inserta genero"
                 />
+                
                 <button
                     className="bg-teal-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
                     type="submit"
@@ -101,6 +107,18 @@ function Add() {
                 >
                     ADD MOVIE
                 </button>
+               
+                <button
+                
+                    className="bg-red-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
+                    type="cancel"
+                    onClick='nodal=false'
+
+                    
+                >
+                    CANCELAR
+                </button>
+
             </form>
         </div>
     );
