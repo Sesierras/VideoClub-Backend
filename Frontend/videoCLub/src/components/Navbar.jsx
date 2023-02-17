@@ -11,7 +11,7 @@ function Navbar() {
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             <a href="#Aboutus" class="flex items-center">
-                                <span class="self-center text-xl font-semibold whitespace-nowrap text-black">MovieDB</span>
+                                <span class="self-center text-xl font-semibold whitespace-nowrap text-black dark:text-zinc-50">MovieDB</span>
                             </a>
                             <div className="md:hidden">
                                 <button
@@ -58,9 +58,9 @@ function Navbar() {
                                 }`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <NavLink to={"/add-movie"} className="hover:bg-teal-600 hover:border-2 hover:border-white hover:text-teal-200 hover:shadow-md rounded-lg bg-white font-bold text-black py-2 px-2">Añadir pelicula</NavLink>
-                                <li className="text-black hover:text-black">
-                                    <a href="#rooms">Lista de peliculas</a>
+                            <NavLink to={"/add-movie"} className="hover:bg-teal-600 hover:border-2 hover:border-white hover:text-teal-200 hover:shadow-md rounded-lg bg-white font-bold text-black py-2 px-2 dark:text-cyan-500">Añadir pelicula</NavLink>
+                                <li className="hover:bg-teal-600 hover:border-2 hover:border-white hover:text-teal-200 hover:shadow-md rounded-lg bg-white font-bold text-black py-2 px-2 dark:text-cyan-500">
+                                    <a href="">Lista de peliculas</a>
 
                                 </li>
                             </ul>
