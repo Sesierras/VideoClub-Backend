@@ -99,7 +99,7 @@ function Add() {
                     type="submit"
                     onClick={submitForm}
                 >
-                    ADD USER
+                    ADD MOVIE
                 </button>
             </form>
         </div>

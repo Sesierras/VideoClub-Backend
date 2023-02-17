@@ -15,9 +15,13 @@ function Edit() {
 
     useEffect(() => {
         axios.get(`mongodb+srv://Administrador:Admin1342**@videoclubdatabase.ry0toej.mongodb.net/?retryWrites=true&w=majority`).then((res) => {
-            setName(res.data.name);
-            setEmail(res.data.email);
-            setPhone(res.data.phone);
+            setTitle(res.data.title);
+            setYear(res.data.year);
+            setTime(res.data.time);
+            setLanguage(res.data.language);
+            setDate(res.data.date);
+            setCountry(res.data.country)
+            setGenreTitle(res.data.genretitle)
         });
     }, []);
 
