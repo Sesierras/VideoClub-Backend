@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Edit() {
     const [title, setTitle] = useState("");
@@ -12,6 +12,7 @@ function Edit() {
     // const [director, setDirector] = useState("");
     // const [actor, setActor] = useState("");
     const [genreTitle, setGenreTitle] = useState("");
+    
 
     useEffect(() => {
         axios.get(`mongodb+srv://Administrador:Admin1342**@videoclubdatabase.ry0toej.mongodb.net/videoClubDataBase?retryWrites=true&w=majority`).then((res) => {

@@ -60,8 +60,7 @@ function Table() {
         key={index}
         class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
             <td class="px-6 py-4">
-                
-            <Link
+                 <Link
                             to={`/movie/${data.id}`}
                             className="bg-teal-600 text-white px-6 py-2 rounded-lg"
                           >
