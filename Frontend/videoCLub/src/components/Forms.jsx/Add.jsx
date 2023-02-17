@@ -3,39 +3,73 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Add() {
-    const [title, setTitle] = useState("");
-    const [year, setYear] = useState("");
-    const [time, setTime] = useState("");
-    const [language, setLanguage] = useState("");
-    const [date, setDate] = useState("");
-    const [country, setCountry] = useState("");
-    // const [director, setDirector] = useState("");
-    // const [actor, setActor] = useState("");
-    const [genreTitle, setGenreTitle] = useState("");
+    const data = [
+        {
+            "title": "",
+            "year": "",
+            "time": "",
+            "language": "",
+            "date": "",
+            "country": "",
+            "director": [
+            
+            ],
+            "genres": [
 
-    const navigate = useNavigate();
-    const data = {
-        title: title,
-        year: year,
-        time: time,
-        language: language,
-        date: date,
-        country: country,
-        /* director: director[
-            {
-                lastname: String,
-                name: String
-            }
-        ], */
-        genre_title: genreTitle,
-        /* actor: actor[
-                {
-                    lastname: String,
-                    name: String,
-                    gender: String
-                }
-            ] */
-    };
+            ],
+            "actor": [
+            
+            ]
+        }
+    ]
+    
+    const [sendDataBack, setSendDataBack] = useState(data)
+        
+    const [title, setTitle] = useState("");
+    const handleSetTitle = (e) => {
+        setTitle(e.target.value)
+    }
+
+
+    const [year, setYear] = useState("");
+    const handleSetYear = (e) => {setYear(e.target.value)}
+
+
+    const [time, setTime] = useState("");
+    const handleSetTime = (e) => {setTime(e.target.value)}
+
+
+    const [language, setLanguage] = useState("");
+    const handleSetLanguage = (e) => {setLanguage(e.target.value)}
+
+
+    const [date, setDate] = useState("");
+    const handleSetDate = (e) => {setDate(e.target.value)}
+
+
+    const [country, setCountry] = useState("");
+    const handleSetCountry = (e) => {setCountry(e.target.value)}
+    
+
+    const [actorN, setActorN] = useState("");
+    const handleSetActorN = (e) => {setActorN(e.target.value)}
+    const [actorLn, setActorLn] = useState("");
+    const handleSetActorLn = (e) => {setActorLn(e.target.value)}
+
+    const [genreTitle, setGenreTitle] = useState("");
+    const handleSetGenre = (e) => {setGenreTitle(e.target.value)}
+
+    const handleSubmit = () => {
+        const sendDataToBack = [...data];
+        sendDataToBack[0].title = title;
+        sendDataToBack[0].year = year;
+        sendDataToBack[0].time = time;
+        sendDataToBack[0].language = language;
+        sendDataToBack[0].date = date;
+        sendDataToBack[0].country = country;
+        sendDataToBack[]
+    }
+    
 
     function submitForm(e) {
         e.preventDefault();
