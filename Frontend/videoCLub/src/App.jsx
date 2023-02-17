@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Table from './components/Table';
 import Navbar from './components/Navbar';
 import Edit from './components/Forms.jsx/Edit';
@@ -37,7 +37,7 @@ function App() {
 			
 			  
 				<Navbar />
-				<BrowserRouter>
+				
 				<Routes>
 					<Route path="/" exact element={<Table />} />
 					<Route path="/home" exact element={<Table />} />
@@ -45,7 +45,7 @@ function App() {
 					<Route path="/add-movie" exact element={<Add />} />
 					<Route path="/edit-movie/:id" exact element={<Edit />} />
 				</Routes>
-				</BrowserRouter>
+				
 
 
 			</div>

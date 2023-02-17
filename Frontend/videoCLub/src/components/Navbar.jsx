@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 function Navbar() {
@@ -58,7 +58,7 @@ function Navbar() {
                                 }`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                            <Link to={"/add-user"} className="hover:bg-teal-600 hover:border-2 hover:border-white hover:text-teal-200 hover:shadow-md rounded-lg bg-white font-bold text-black py-2 px-2">Añadir pelicula</Link>
+                            <NavLink to={"/add-movie"} className="hover:bg-teal-600 hover:border-2 hover:border-white hover:text-teal-200 hover:shadow-md rounded-lg bg-white font-bold text-black py-2 px-2">Añadir pelicula</NavLink>
                                 <li className="text-black hover:text-black">
                                     <a href="#rooms">Lista de peliculas</a>
 
