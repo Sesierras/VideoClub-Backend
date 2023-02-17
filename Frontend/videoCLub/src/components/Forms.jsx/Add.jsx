@@ -43,56 +43,56 @@ function Add() {
     }
     return (
         <div className="w-screen h-full flex flex-col justify-center items-center mt-16">
-            <h2 className="text-2xl font-bold">ADD USER</h2>
+            <h2 className="text-2xl font-bold">ADD MOVIE</h2>
             <form className="w-[50%] h-full flex flex-col mt-2">
                 <input
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="Inserta titulo"
                 />
                 <input
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
-                    type="email"
-                    placeholder="Enter your email"
+                    type="year"
+                    placeholder="Inserta año"
                 />
                 <input
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
-                    type="phone"
-                    placeholder="Enter your phone no."
+                    type="text"
+                    placeholder="Inserta duración"
                 />
                 <input
                     value={language}
                     onChange={(e) => setLanguage(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
-                    type="phone"
-                    placeholder="Enter your phone no."
+                    type="text"
+                    placeholder="Inserta lenguaje"
                 />
                 <input
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
-                    type="phone"
-                    placeholder="Enter your phone no."
+                    type="date"
+                    placeholder="Inserta fecha de estreno"
                 />
                 <input
                     value={country}
                     onChange={(e) => setCountry(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
-                    type="phone"
-                    placeholder="Enter your phone no."
+                    type="text"
+                    placeholder="inserta ciudad"
                 />
                 <input
                     value={genreTitle}
                     onChange={(e) => setGenreTitle(e.target.value)}
                     className="bg-white/10 outline-none font-normal border border-zinc-400 py-6 pl-6 mt-4"
                     type="phone"
-                    placeholder="Enter your phone no."
+                    placeholder="Inserta genero"
                 />
                 <button
                     className="bg-teal-600 outline-none font-bold border text-white border-zinc-400 py-4 pl-4 mt-4"
